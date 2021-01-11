@@ -21,7 +21,7 @@ ob_start() ?>
   <?php for ($i = 0; $i < count($livres); $i++) : ?>
 
     <tr>
-      <td class="align-middle"><img src="bibli/public/images/<?= $livres[$i]->getImage(); ?>" width="60"></td>
+      <td class="align-middle"><img src="public/images/<?= $livres[$i]->getImage(); ?>" width="60"></td>
       <td class="align-middle"><?= $livres[$i]->getTitre() ?></td>
       <td class="align-middle"><?= $livres[$i]->getNbPages() ?></td>
       <td class="align-middle"><a href="#" class="btn btn-warning">Modifier</td>
