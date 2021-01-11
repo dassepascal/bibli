@@ -7,5 +7,7 @@ if (empty($_GET['page'])) {
       require "views/accueil.view.php";
 
       break;
+    case "livres":
+      require "views/livres.view.php";
   }
 }

@@ -9,34 +9,34 @@
 </head>
 
 <body>
-<nav class = "navbar navbar-expand-lg navbar-dark bg-primary">
-  
-  <button class = "navbar-toggler" type = "button" data-toggle = "collapse" data-target = "#navbarColor01" aria-controls = "navbarColor01" aria-extended = "false" aria-label = "Basculer la navigation ">
-    <span class = "navbar-toggler-icon"> </span>
-  </button>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
 
-  <div class = "collapse navbar-collapse" id = "navbarColor01">
-    <ul class = "navbar-nav mr-auto">
-      <li class = "nav-item active">
-        <a class="nav-link" href="index.php"> Accueil</a>
-       
-      </li>
-      <li class = "nav-item active">
-        <a class="nav-link" href="livres.php"> Livres</a>
-       
-      </li>
-    
-      
-     
-    </ul>
-  
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-extended="false" aria-label="Basculer la navigation ">
+      <span class="navbar-toggler-icon"> </span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="accueil"> Accueil</a>
+
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="livres"> Livres</a>
+
+        </li>
+
+
+
+      </ul>
+
+    </div>
+  </nav>
+  <div class="container">
+    <h1 class="rounded border border-dark p-2 m-2 text-center text-white bg-info"><?= $titre ?></h1>
+    <?= $content ?>
   </div>
-</nav>
-<div class="container">
-<h1 class="rounded border border-dark p-2 m-2 text-center text-white bg-info"><?= $titre?></h1>
-<?= $content ?>
-</div>
-    
+
 
 
 
