@@ -4,7 +4,7 @@ require "Livre.class.php";
 class LivreManager extends Model
 {
 
-  private $livres;
+  private $livres; //tableau de livres
   public function __construct()
   { //le constructeur est vide
   }
@@ -37,5 +37,10 @@ class LivreManager extends Model
       $l = new Livre(($monlivre['id']), $monlivre['titre'], $monlivre['nbPages'], $monlivre['image']);
       $this->ajoutLivre($l);
     }
+  }
+  public function getLivreById()
+  {
+    //? parcourir mon tableau de livre " private = $livres;";
+
   }
 }
