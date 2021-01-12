@@ -41,7 +41,9 @@ try {
         } else if ($url[1] === "s") {
           echo "suppression  un livre";
         } else if ($url[1] === "av") {
-          echo "validation d'ajout d'un livre";
+          //echo "validation d'ajout d'un livre";
+          $livreController->ajouterLeLivreValidation();//pas argument donnees transferer par la variable post
+          
         }
          else {
           throw   new Exception("La page n'existe pas");

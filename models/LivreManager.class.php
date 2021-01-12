@@ -5,6 +5,7 @@ class LivreManager extends Model
 {
 
   private $livres; //tableau de livres
+
   public function __construct()
   { //le constructeur est vide
   }
@@ -47,5 +48,25 @@ class LivreManager extends Model
         return $this->livres[$i];
       }
     }
+  }
+  public function ajoutLivreBd($titre,$nbPages,$image){
+    var_dump($titre);
+    var_dump($nbPages);
+    var_dump($image);
+    $req = "
+    INSERT INTO livres (titre, nbPages, image)
+    values (:titre, :nbPages, :image)";   
+
+$stmt = $this->getBdd()->prepare($req);
+$stmt->bindValue(":titre",$titre,PDO :: PARAM_STR);
+$stmt->bindValue(":nbPages",$nbPages,PDO :: PARAM_INT);
+$stmt->bindValue(":image",$image,PDO :: PARAM_STR);
+$resultat=$stmt->execute();
+$stmt->closeCursor();
+
+if($resultat>0){
+  $livre = new Livre($this->getBdd()->lastInsertId(),$titre,$nbPages,$image);
+  $this->ajoutLivre($livre);
+}
   }
 }
