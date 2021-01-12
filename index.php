@@ -27,10 +27,10 @@ try {
           $livreController->afficherLivres();
         } else if ($url[1] === "l") {
           // affichage du livre $url[2];
-          // creation d'une fonction permettant l'affichage du livre dans livresController => afficherLivre() sans livre sans s;
+          // creation d'une fonction permettant l'affichage du livre dans livresController => afficherLeLivre() sans ;
           //? echo $url[2];
 
-          echo $livreController->afficherLivre($url[2]);
+          echo $livreController->afficherLeLivre($url[2]);
         } else if ($url[1] === "a") {
           echo "ajouter un livre";
         } else if ($url[1] === "m") {
