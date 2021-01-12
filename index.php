@@ -15,9 +15,9 @@ try {
     // securisation de l'envoi à travers l'url avec: filter_var($_GET['page']), FILTER_SANITIZE_URL
 
     $url = explode("/", filter_var($_GET['page']), FILTER_SANITIZE_URL);
-    echo '<pre>';
-    print_r($url);
-    echo '<pre>';
+    // echo '<pre>';
+    // print_r($url);
+    // echo '<pre>';
     switch ($url[0]) {
       case 'accueil':
         require "views/accueil.view.php";
