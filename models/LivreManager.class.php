@@ -38,9 +38,14 @@ class LivreManager extends Model
       $this->ajoutLivre($l);
     }
   }
-  public function getLivreById()
+  public function getLivreById($id)
   {
     //? parcourir mon tableau de livre " private = $livres;";
-
+    for ($i = 0; $i < count($this->livres); $i++) {
+      //? test comparer l'identifiant du livre for($i=0; $i < count($this->livres);$i++) avec l(identifiant transfere en parametre de fonction getLivreById($id))
+      if ($this->livres[$i]->getId() === $id) {
+        return $this->livres[$i];
+      }
+    }
   }
 }
