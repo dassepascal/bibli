@@ -23,5 +23,8 @@ class  LivresController
     //l'action doit etre realiser par le model LivreManager.class.php;
     //creation d'une nouvelle fonction getLivreById($id) qui retournera un livre;
     $livre = $this->livreManager->getLivreById($id);
+    //echo $livre->getTitre();
+    // creation de l'affichage dans le dossier views avec le fichier afficherLivre.view.php
+    require 'view/afficherLivre.view.php';
   }
 }
