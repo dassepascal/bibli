@@ -22,9 +22,14 @@ class  LivresController
   {
     //l'action doit etre realiser par le model LivreManager.class.php;
     //creation d'une nouvelle fonction getLivreById($id) qui retournera un livre;
-    $livre = $this->livreManager->getLivreById($id);
+    $livres = $this->livreManager->getLivreById($id);
     //echo $livre->getTitre();
     // creation de l'affichage dans le dossier views avec le fichier afficherLeLivre.view.php
     require 'views/afficherLeLivre.view.php';
+  }
+  public function ajouterLeLivre(){
+   // $leLivre = $this->livreManager->getLivreById();
+    //require "views/ajouterLeLivre.view.php";
+
   }
 }

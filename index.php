@@ -30,9 +30,12 @@ try {
           // creation d'une fonction permettant l'affichage du livre dans livresController => afficherLeLivre() sans ;
           //? echo $url[2];
 
-          echo $livreController->afficherLeLivre($url[2]);
+          $livreController->afficherLeLivre($url[2]);
+
         } else if ($url[1] === "a") {
           echo "ajouter un livre";
+          //? ajouter la nouvelle fonction ajouterLeLivre() dans Livres.controller.controller.php
+          //$livreController->ajouterLeLivre();
         } else if ($url[1] === "m") {
           echo "modifier un livre";
         } else if ($url[1] === "s") {
