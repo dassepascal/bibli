@@ -1,4 +1,7 @@
 <?php
+
+define("URL", str_replace("index.php", "", (isset($_SERVER['HTTPS']) ? "https" : "http")));
+var_dump(URL);
 require_once "controllers/Livres.controller.controller.php";
 $livreController = new LivresController;
 
@@ -11,5 +14,6 @@ if (empty($_GET['page'])) {
       break;
     case "livres":
       $livreController->afficherLivres();
+      break;
   }
 }
