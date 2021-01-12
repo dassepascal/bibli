@@ -33,9 +33,9 @@ try {
           $livreController->afficherLeLivre($url[2]);
 
         } else if ($url[1] === "a") {
-          echo "ajouter un livre";
+          //echo "ajouter un livre";
           //? ajouter la nouvelle fonction ajouterLeLivre() dans Livres.controller.controller.php
-          //$livreController->ajouterLeLivre();
+          $livreController->ajouterLeLivre();//aucune information a transferer à l'interieur puisque afficher une vue
         } else if ($url[1] === "m") {
           echo "modifier un livre";
         } else if ($url[1] === "s") {
