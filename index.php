@@ -21,7 +21,7 @@ if (empty($_GET['page'])) {
       require "views/accueil.view.php";
       break;
     case "livres":
-      if (empty($urll[1])) {
+      if (empty($url[1])) {
         $livreController->afficherLivres();
       }
 
