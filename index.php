@@ -38,8 +38,12 @@ try {
           $livreController->ajouterLeLivre();//aucune information a transferer à l'interieur puisque afficher une vue
         } else if ($url[1] === "m") {
           echo "modifier un livre";
+
         } else if ($url[1] === "s") {
-          echo "suppression  un livre";
+         // echo "suppression  un livre";
+          // echo $url[2];affiche id du livre
+
+          $livreController->suppressionLivre($url[2]);
         } else if ($url[1] === "av") {
           //echo "validation d'ajout d'un livre";
           $livreController->ajouterLeLivreValidation();//pas argument donnees transferer par la variable post
