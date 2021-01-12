@@ -69,4 +69,18 @@ if($resultat>0){
   $this->ajoutLivre($livre);
 }
   }
+  public function suppressionLivreBD($id){
+    $req= "
+    Delete from livres where id = :idlivre 
+    ";
+$stmt = $this->getBdd()->prepare($req);
+$stmt->bindValue(":idlivre",$id,PDO::PARAM_INT);
+$resultat = $stmt->execute();
+$stmt->closeCursor;
+if($resultat > 0){
+  $livre = $this->getLivreById($id);
+  unset($livre);
+}
+
+  }
 }

@@ -69,4 +69,14 @@ class  LivresController
         throw new Exception("l'ajout de l'image n'a pas fonctionné");
     else return ($random."_".$file['name']);
 }
+public function suppressionLivre($id){
+
+  $nomImage = $this->livreManager->getLivreById($id)->getImage();
+  //? suppression de l'image
+  unlink("public/images/".$nomImage);
+  $this->livreManager->suppressionLivreBd($id);
+  header('location:'.URL."livres");
+
+
+}
 }
