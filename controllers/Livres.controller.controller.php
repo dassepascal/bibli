@@ -29,7 +29,7 @@ class  LivresController
   }
   public function ajouterLeLivre(){
    // $leLivre = $this->livreManager->getLivreById();
-    //require "views/ajouterLeLivre.view.php";
+    require "views/ajouterLeLivre.view.php";
 
   }
 }
