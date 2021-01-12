@@ -18,4 +18,10 @@ class  LivresController
 
     require "views/livres.view.php";
   }
+  public function afficherLeLivre($id)
+  {
+    //l'action doit etre realiser par le model LivreManager.class.php;
+    //creation d'une nouvelle fonction getLivreById($id) qui retournera un livre;
+    $livre = $this->livreManager->getLivreById($id);
+  }
 }
