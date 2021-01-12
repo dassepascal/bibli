@@ -16,13 +16,15 @@ if (empty($_GET['page'])) {
   // echo '<pre>';
   // print_r($url);
   // echo '<pre>';
-  switch ($_GET['page']) {
+  switch ($url[1]) {
     case 'accueil':
       require "views/accueil.view.php";
       break;
     case "livres":
       if (empty($url[1])) {
         $livreController->afficherLivres();
+      } else if ($url[1] === "1") {
+        echo "affichage d'un livre";
       }
 
       break;
