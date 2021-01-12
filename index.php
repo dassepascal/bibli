@@ -15,9 +15,9 @@ try {
     // securisation de l'envoi à travers l'url avec: filter_var($_GET['page']), FILTER_SANITIZE_URL
 
     $url = explode("/", filter_var($_GET['page']), FILTER_SANITIZE_URL);
-    // echo '<pre>';
-    // print_r($url);
-    // echo '<pre>';
+    echo '<pre>';
+    print_r($url);
+    echo '<pre>';
     switch ($url[0]) {
       case 'accueil':
         require "views/accueil.view.php";
@@ -26,7 +26,11 @@ try {
         if (empty($url[1])) {
           $livreController->afficherLivres();
         } else if ($url[1] === "l") {
-          echo "affichage d'un livre";
+          // affichage du livre $url[2];
+          // creation d'une fonction permettant l'affichage du livre dans livresController => afficherLivre() sans livre sans s;
+          //? echo $url[2];
+
+          echo $livreController->afficherLivre($url[2]);
         } else if ($url[1] === "a") {
           echo "ajouter un livre";
         } else if ($url[1] === "m") {
