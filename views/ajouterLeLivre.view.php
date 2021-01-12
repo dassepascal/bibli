@@ -1,7 +1,7 @@
 <?php
 ob_start() ;
 ?>
-<form>
+<form method="post"action="<?= URL ?>livres/av" enctype="multipart/form-data">
   <div class="form-group">
     <label for="titre">Titre:</label>
     <input type="text" class="form-control" id="titre" >
@@ -14,8 +14,7 @@ ob_start() ;
     <label for="image">choix couverture</label>
     <input type="file" class="form-control-file" id="image" name="image">
   </div>
-</form>
-  </div>
+
   
   
   <button type="submit" class="btn btn-primary">Valider</button>

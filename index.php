@@ -40,7 +40,10 @@ try {
           echo "modifier un livre";
         } else if ($url[1] === "s") {
           echo "suppression  un livre";
-        } else {
+        } else if ($url[1] === "av") {
+          echo "validation d'ajout d'un livre";
+        }
+         else {
           throw   new Exception("La page n'existe pas");
         }
         break;
